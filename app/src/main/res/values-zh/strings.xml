@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Lab1</string>
-    <string name="Hello_message">世界，你好</string>
+    <string name="app_name">实验2</string>
+    <string name="Hello_message">这是我的图形界面</string>
     <string name="ButtonText">按钮</string>
+    <string name="checkboxText">请选择</string>
+    <string name="switchText">开/关"</string>
+    <string name="message">请输入</string>
 </resources>
