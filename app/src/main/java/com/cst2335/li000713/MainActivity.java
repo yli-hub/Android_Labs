@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_main_relative);
         //setContentView(R.layout.activity_main_linear);
-        setContentView(R.layout.activity_main_grid);
-        //setContentView(R.layout.activity_main_relative);
+        //setContentView(R.layout.activity_main_grid);
+        setContentView(R.layout.activity_main_relative);
         //TextView myText=findViewById(R.id.text);
         //EditText myEdit = findViewById(R.id.edit);
         Button btn = (Button) findViewById(R.id.btn1);
