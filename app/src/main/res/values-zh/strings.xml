@@ -7,5 +7,6 @@
     <string name="switchText">开/关"</string>
     <string name="message">请输入</string>
     <string name="toast_message">更多信息</string>
-    <string name="snackbar_message">显示更多信息</string>
+    <string name="snackbar_message1">开关已开</string>
+    <string name="snackbar_message2">开关已关</string>
 </resources>

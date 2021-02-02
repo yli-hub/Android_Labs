@@ -1,6 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/myText"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textSize="30dp"
+        android:text="@string/Hello_message"
+        android:layout_alignParentTop="true">
+    </TextView>
+
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="209dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/myText"
+        android:layout_marginTop="2dp"
+        android:text="@string/ButtonText" />
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/myText"
+        android:layout_toRightOf="@id/btn1"
+        android:text="@string/checkboxText"
+        android:gravity="fill"
+        android:layout_weight="1"/>
+
+    <ImageButton
+        android:id="@+id/imagebtn"
+        android:layout_width="214dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn1"
+        android:layout_weight="1"
+        android:gravity="fill"
+        android:src="@drawable/flag" />
+
+    <Switch
+        android:id="@+id/switch_1"
+        android:layout_below="@id/checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/switchText"
+        android:layout_weight="1"
+        android:layout_toRightOf="@id/imagebtn"
+        android:gravity="fill"/>
+
+    <EditText
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/message"
+        android:layout_below="@id/imagebtn"
+        android:inputType="textPersonName"/>
+
+</RelativeLayout>
