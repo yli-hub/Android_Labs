@@ -6,4 +6,6 @@
     <string name="checkboxText">请选择</string>
     <string name="switchText">开/关"</string>
     <string name="message">请输入</string>
+    <string name="toast_message">更多信息</string>
+    <string name="snackbar_message">显示更多信息</string>
 </resources>

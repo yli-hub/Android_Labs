@@ -47,7 +47,7 @@
         android:orientation="horizontal">
 
         <ImageButton
-            android:id="@+id/image"
+            android:id="@+id/imagebtn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:src="@drawable/flag"
@@ -68,8 +68,9 @@
             android:id="@+id/message"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:inputType="textPersonName"
+            android:inputType="textPersonName|textCapSentences"
             android:text="@string/message"
             android:textColor="#b0aeab"
             android:textSize="25dp"/>
     </LinearLayout>
+</LinearLayout>

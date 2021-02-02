@@ -5,4 +5,6 @@
     <string name="checkboxText">Check this out</string>
     <string name="switchText">Switch on/off"</string>
     <string name="message">Type here</string>
+    <string name="toast_message">Here is more information</string>
+    <string name="snackbar_message">The switch is on</string>
 </resources>
