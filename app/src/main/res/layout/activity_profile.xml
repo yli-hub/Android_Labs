@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/pText1"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/ptextmeg1"
+        android:textSize="15dp"></TextView>
+
+    <TextView
+        android:id="@+id/pText2"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/ptextmeg2"
+        android:textSize="15dp">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/petext1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:singleLine="true"
+        android:text="@string/pet1"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/pText3"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/ptextmeg3"
+        android:textSize="15dp">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/petext2"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:inputType="text"
+        android:singleLine="true"
+        android:text="@string/pet2"
+        android:textSize="25dp" />
+    <TextView
+        android:id="@+id/pText4"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/ptextmeg4"
+        android:textSize="15dp"
+>
+    </TextView>
+    <ImageButton
+        android:id="@+id/imgbtn1"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:src="@android:drawable/picture_frame"
+    />
+    <TextView
+        android:id="@+id/pText5"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/ptextmeg5"
+        android:textSize="15dp"
+>
+    </TextView>
+
+
+
+
+</LinearLayout>

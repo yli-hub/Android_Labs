@@ -7,4 +7,11 @@
     <string name="textv2">请输入密码</string>
     <string name="edt2">      </string>
     <string name="toast_message">跳转中</string>
+    <string name="ptextmeg1">Your profile</string>
+    <string name="ptextmeg2">Your name</string>
+    <string name="ptextmeg3">Your email</string>
+    <string name="ptextmeg4">Your picture</string>
+    <string name="ptextmeg5">Click the button above to take a picture</string>
+    <string name="pet1">Enter your name</string>
+    <string name="pet2">Enter your email</string>
 </resources>

@@ -37,7 +37,7 @@
         android:id="@+id/editT2"
         android:layout_width="match_parent"
         android:layout_height="17dp"
-        android:inputType="textWebEmailAddress"
+        android:inputType="textPassword"
         android:text="@string/edt2"
         android:textSize="25dp"
         android:singleLine="true"/>
