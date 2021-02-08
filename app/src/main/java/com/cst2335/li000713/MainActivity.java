@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_main_relative);
-        setContentView(R.layout.activity_main_linear);
+        setContentView(R.layout.activity_main);
         //setContentView(R.layout.activity_main_grid);
         //setContentView(R.layout.activity_main_relative);
         //TextView myText=findViewById(R.id.text);
@@ -33,29 +33,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        Switch sw = (Switch) findViewById(R.id.switch_1);
-        sw.setOnCheckedChangeListener((CompoundButton a, boolean b)->{
-            if (b==true){
-                Snackbar
-                        .make(sw, getResources().getString(R.string.snackbar_message1), Snackbar.LENGTH_SHORT)
-                        .setAction("Undo",click->sw.setChecked((!b)))
-                        .show();
-            }else{
-                Snackbar
-                        .make(sw, getResources().getString(R.string.snackbar_message2), Snackbar.LENGTH_SHORT)
-                        .setAction("Undo",click->sw.setChecked((!b)))
-                        .show();
-            }
-        });
 
-
-
-    CheckBox cb = (CheckBox) findViewById(R.id.checkbox);
-        cb.setChecked(false);
-
-    ImageButton ibtn = findViewById(R.id.imagebtn);
-        ibtn.setOnClickListener(btn1 -> {
-        Toast.makeText(this, getResources().getString(R.string.toast_message), Toast.LENGTH_LONG).show();
-    });
     }
 }

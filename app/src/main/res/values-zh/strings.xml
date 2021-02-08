@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">实验2</string>
-    <string name="Hello_message">这是我的图形界面</string>
-    <string name="ButtonText">按钮</string>
-    <string name="checkboxText">请选择</string>
-    <string name="switchText">开/关"</string>
-    <string name="message">请输入</string>
-    <string name="toast_message">更多信息</string>
-    <string name="snackbar_message1">开关已开</string>
-    <string name="snackbar_message2">开关已关</string>
+    <string name="app_name">实验3</string>
+    <string name="textv1">请输入邮件地址</string>
+    <string name="ButtonText">登录</string>
+    <string name="edt1">请输入邮箱</string>
+    <string name="textv2">请输入密码</string>
+    <string name="edt2">      </string>
+    <string name="toast_message">跳转中</string>
 </resources>

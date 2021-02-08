@@ -1,11 +1,9 @@
 <resources>
-    <string name="app_name">Lab2</string>
-    <string name="Hello_message">Look at my GUI!</string>
-    <string name="ButtonText">Click Here</string>
-    <string name="checkboxText">Check this out</string>
-    <string name="switchText">Switch on/off"</string>
-    <string name="message">Type here</string>
-    <string name="toast_message">Here is more information</string>
-    <string name="snackbar_message1">The switch is now on</string>
-    <string name="snackbar_message2">The switch is now off</string>
+    <string name="app_name">Lab3</string>
+    <string name="textv1">Enter your email address</string>
+    <string name="ButtonText">Login</string>
+    <string name="edt1">Type your email</string>
+    <string name="textv2">Enter the password</string>
+    <string name="edt2">          </string>
+    <string name="toast_message">Jumping...</string>
 </resources>
