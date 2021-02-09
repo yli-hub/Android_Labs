@@ -1,7 +1,9 @@
 package com.cst2335.li000713;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,29 +16,30 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.textfield.TextInputLayout;
 
 public class MainActivity extends AppCompatActivity {
 
 
+    private Object ProfileActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_main_relative);
         setContentView(R.layout.activity_main);
-        //setContentView(R.layout.activity_main_grid);
-        //setContentView(R.layout.activity_main_relative);
-        //TextView myText=findViewById(R.id.text);
-        //EditText myEdit = findViewById(R.id.edit);
+
         Button btn = (Button) findViewById(R.id.btn1);
-        btn.setOnClickListener((v) -> {
-            Toast.makeText(this, getResources().getString(R.string.toast_message), Toast.LENGTH_LONG).show();
-        });
+        Intent nextpage = new Intent(this,ProfileActivity.class);
 
-
+        btn1.setOnClickListener(click -> startActivity(nextpage));
 
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult( requestCode,  resultCode, data);
+    }
 
     @Override
     protected void onStart() {

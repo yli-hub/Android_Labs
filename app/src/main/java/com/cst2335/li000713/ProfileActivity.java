@@ -10,6 +10,7 @@ import android.util.Log;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class ProfileActivity extends AppCompatActivity {
 
@@ -17,8 +18,13 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+        Intent fromMain = getIntent();
+        fromMain.getStringExtra("EMAIL");
+
+        Log.e(ACTIVITY_NAME,"in function: onCreate()");
     }
-    private ImageButton mImageButton = findViewById(R.id.imgbtn1);
+
+    ImageButton mImageButton = findViewById(R.id.imgbtn1);
     static final int REQUEST_IMAGE_CAPTURE = 1;
 
     private void dispatchTakePictureIntent() {
@@ -40,30 +46,36 @@ public class ProfileActivity extends AppCompatActivity {
             mImageButton.setImageBitmap(imageBitmap);
         }
     }
+    Intent goToProfile = new Intent(MainActivity.this, ProfileActivity.class);
+    goToProfile.putExtra("EMAIL", … what is written in the edit text);
 
     @Override
     protected void onStart() {
         super.onStart();
-//        Log.e(ACTIVITY_NAME, "In function:" + PROFILE_ACTIVITY);
+        Log.e(ACTIVITY_NAME,"in function: onStart()");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+        Log.e(ACTIVITY_NAME,"in function: onResume()");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
+        Log.e(ACTIVITY_NAME,"in function: onPause()");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
+        Log.e(ACTIVITY_NAME,"in function: onStop()");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        Log.e(ACTIVITY_NAME,"in function: onDestroy()");
     }
 }
