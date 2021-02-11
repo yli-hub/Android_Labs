@@ -59,7 +59,7 @@
 >
     </TextView>
     <ImageButton
-        android:id="@+id/imgbtn1"
+        android:id="@+id/imgbtn"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:src="@android:drawable/picture_frame"

@@ -1,31 +1,35 @@
 package com.cst2335.li000713;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
-import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.TextView;
+
+
 
 public class ProfileActivity extends AppCompatActivity {
+
+    static final int REQUEST_IMAGE_CAPTURE = 1;
+    public static final String ACTIVITY_NAME = "PROFILE_ACTIVITY";
+    private ImageButton mImageButton;
+    private EditText email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+        mImageButton = findViewById(R.id.imgbtn);
+        email = findViewById(R.id.petext2);
+        Log.e(ACTIVITY_NAME,"in function"+" onCreate");
+
+        mImageButton.setOnClickListener(click -> dispatchTakePictureIntent());
         Intent fromMain = getIntent();
-        fromMain.getStringExtra("EMAIL");
-
-        Log.e(ACTIVITY_NAME,"in function: onCreate()");
+        email.setText(fromMain.getStringExtra("email"));
     }
-
-    ImageButton mImageButton = findViewById(R.id.imgbtn1);
-    static final int REQUEST_IMAGE_CAPTURE = 1;
 
     private void dispatchTakePictureIntent() {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -33,9 +37,6 @@ public class ProfileActivity extends AppCompatActivity {
             startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
         }
     }
-    public static final String ACTIVITY_NAME = "PROFILE_ACTIVITY";
-
-
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -46,13 +47,10 @@ public class ProfileActivity extends AppCompatActivity {
             mImageButton.setImageBitmap(imageBitmap);
         }
     }
-    Intent goToProfile = new Intent(MainActivity.this, ProfileActivity.class);
-    goToProfile.putExtra("EMAIL", … what is written in the edit text);
-
-    @Override
+       @Override
     protected void onStart() {
         super.onStart();
-        Log.e(ACTIVITY_NAME,"in function: onStart()");
+        Log.e(ACTIVITY_NAME,"in function:"+ "onStart");
     }
 
     @Override
@@ -60,22 +58,22 @@ public class ProfileActivity extends AppCompatActivity {
         super.onResume();
         Log.e(ACTIVITY_NAME,"in function: onResume()");
     }
-
     @Override
     protected void onPause() {
         super.onPause();
-        Log.e(ACTIVITY_NAME,"in function: onPause()");
+        Log.e(ACTIVITY_NAME, "In function: " + "onPause");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.e(ACTIVITY_NAME,"in function: onStop()");
+        Log.e(ACTIVITY_NAME, "In function: " + "onStop");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.e(ACTIVITY_NAME,"in function: onDestroy()");
+        Log.e(ACTIVITY_NAME, "In function: " + "onDestroy");
+
     }
 }
