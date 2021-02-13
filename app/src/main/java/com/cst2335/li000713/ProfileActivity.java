@@ -6,12 +6,14 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
 
 
-public class ProfileActivity extends AppCompatActivity {
+public class ProfileActivity<click> extends AppCompatActivity {
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
     public static final String ACTIVITY_NAME = "PROFILE_ACTIVITY";
@@ -24,11 +26,18 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
         mImageButton = findViewById(R.id.imgbtn);
         email = findViewById(R.id.petext2);
-        Log.e(ACTIVITY_NAME,"in function"+" onCreate");
+        Log.e(ACTIVITY_NAME, "in function" + " onCreate");
 
         mImageButton.setOnClickListener(click -> dispatchTakePictureIntent());
         Intent fromMain = getIntent();
         email.setText(fromMain.getStringExtra("email"));
+
+        Button chatbtn = findViewById(R.id.chatbtn);
+        Intent goToChatrm = new Intent(ProfileActivity.this, ChatRoomActivity.class);
+        chatbtn.setOnClickListener(click -> {
+//            goToChatrm.putExtra("email",inputEmail.getText().toString());
+            startActivity(goToChatrm);
+        });
     }
 
     private void dispatchTakePictureIntent() {
@@ -47,6 +56,8 @@ public class ProfileActivity extends AppCompatActivity {
             mImageButton.setImageBitmap(imageBitmap);
         }
     }
+
+
        @Override
     protected void onStart() {
         super.onStart();

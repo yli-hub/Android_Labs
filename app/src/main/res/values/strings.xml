@@ -1,11 +1,12 @@
 <resources>
-    <string name="app_name">Lab3</string>
+    <string name="app_name">Chatroom</string>
     <string name="textv1">Enter your email address</string>
     <string name="ButtonText">Login</string>
     <string name="edt1">Type your email</string>
     <string name="textv2">Enter the password</string>
     <string name="edt2">  password        </string>
     <string name="toast_message">Jumping...</string>
+    <string name="chatbtnmsg">Go to chat</string>
     <string name="ptextmeg1">Your profile.</string>
     <string name="ptextmeg2">Your name</string>
     <string name="ptextmeg3">Your email</string>
@@ -13,5 +14,7 @@
     <string name="ptextmeg5">Click the button above to take a picture</string>
     <string name="pet1">Enter your name</string>
     <string name="pet2">Enter your email</string>
-
+    <string name="sendmsg">SEND</string>
+    <string name="recievemsg">RECIEVE</string>
+    <string name="crtype">Type here</string>
 </resources>

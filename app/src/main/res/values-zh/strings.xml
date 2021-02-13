@@ -7,11 +7,15 @@
     <string name="textv2">请输入密码</string>
     <string name="edt2">   密码   </string>
     <string name="toast_message">跳转中</string>
-    <string name="ptextmeg1">Your profile</string>
-    <string name="ptextmeg2">Your name</string>
-    <string name="ptextmeg3">Your email</string>
-    <string name="ptextmeg4">Your picture</string>
-    <string name="ptextmeg5">Click the button above to take a picture</string>
-    <string name="pet1">Enter your name</string>
-    <string name="pet2">Enter your email</string>
+    <string name="chatbtnmsg">Go to chat</string>
+    <string name="ptextmeg1">你的资料</string>
+    <string name="ptextmeg2">名字</string>
+    <string name="ptextmeg3">邮箱</string>
+    <string name="ptextmeg4">照片</string>
+    <string name="ptextmeg5">拍照</string>
+    <string name="pet1">输入你的名字</string>
+    <string name="pet2">输入你的邮箱</string>
+    <string name="sendmsg">发送</string>
+    <string name="recievemsg">接收</string>
+    <string name="crtype">请输入...</string>
 </resources>
