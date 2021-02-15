@@ -16,34 +16,33 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class ChatRoomActivity<MyListAdapter> extends AppCompatActivity {
-     MyListAdapter myAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        element.add("one");
-        element.add("two");
-        element.add("Three");
-        element.add("Four");
-        element.add("Five");
-
         setContentView(R.layout.activity_chat_room);
+
+        MyListAdapter myAdapter = (MyListAdapter) new ChatRoomActivity.MyListAdapter();
         ListView chatlist = (ListView) findViewById(R.id.crlv);
+        chatlist.setAdapter((ListAdapter) myAdapter);
         EditText etext = findViewById(R.id.type);
+
         Button sendBtn = findViewById(R.id.sendbtn);
         sendBtn.setOnClickListener( click ->{
-            Message smsg = new Message(etext.toString(), R.drawable.row_send,0);
+            Message smsg = new Message(etext.getText().toString(), R.drawable.row_send,0);
             element.add(smsg);
-            myAdapter;
+            myAdapter.notifyAll();
         });
+
         Button rcvBtn = findViewById(R.id.rcvbtn);
         rcvBtn.setOnClickListener( click -> {
-            Message rmsg = new Message(etext.toString(), R.drawable.row_receive, 1);
+            Message rmsg = new Message(etext.getText().toString(), R.drawable.row_receive, 1);
                     element.add(rmsg);
+                    myAdapter.notify();
         });
-        myAdapter = (MyListAdapter) new ChatRoomActivity.MyListAdapter();
-        chatlist.setAdapter((ListAdapter) myAdapter);
+       
+
     }
     class Message {
         private String text;
