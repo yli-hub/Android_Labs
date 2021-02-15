@@ -2,37 +2,38 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ListView
         android:id="@+id/crlv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/sendbtn"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="SEND" />
 
         <EditText
             android:id="@+id/type"
             android:layout_width="200dp"
             android:layout_height="45dp"
             android:layout_weight="2"
-            android:text="@string/crtype" />
-    </ListView>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+            android:hint="Type here" />
 
         <Button
-            android:id="@+id/sendbtn"
-            android:layout_width="80dp"
-            android:layout_height="45dp"
-            android:layout_weight="1"
-            android:text="SEND" />
-
-        <Button
-            android:id="@+id/recievebtn"
-            android:layout_width="wrap_content"
+            android:id="@+id/rcvbtn"
+            android:layout_width="110dp"
             android:layout_height="45dp"
             android:layout_weight="1"
             android:text="RECIEVE" />
