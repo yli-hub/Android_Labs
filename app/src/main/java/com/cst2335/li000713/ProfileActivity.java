@@ -35,7 +35,6 @@ public class ProfileActivity<click> extends AppCompatActivity {
         Button chatbtn = findViewById(R.id.chatbtn);
         Intent goToChatrm = new Intent(ProfileActivity.this, ChatRoomActivity.class);
         chatbtn.setOnClickListener(click -> {
-//            goToChatrm.putExtra("email",inputEmail.getText().toString());
             startActivity(goToChatrm);
         });
     }
