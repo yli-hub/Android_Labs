@@ -7,14 +7,12 @@
         android:id="@+id/simgview"
         android:layout_width="50dp"
         android:layout_height="70dp"
-        android:layout_weight="1"
         android:src="@drawable/row_send" />
 
     <TextView
         android:id="@+id/tx_send"
-        android:layout_width="1dp"
+        android:layout_width="350dp"
         android:layout_height="70dp"
-        android:layout_weight="15"
         android:textSize="30dp"/>
 
 

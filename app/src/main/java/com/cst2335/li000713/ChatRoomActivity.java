@@ -49,8 +49,6 @@ public class ChatRoomActivity<MyListAdapter> extends AppCompatActivity {
             element.add(rmsg);
             myAdapter.notifyDataSetChanged();
         });
-
-
     }
 
     class Message {
@@ -102,21 +100,21 @@ public class ChatRoomActivity<MyListAdapter> extends AppCompatActivity {
             LayoutInflater inflater = getLayoutInflater();
 
             switch (msgLayout) {
-                case 0: {
+                case 0 : {
                     View sView = inflater.inflate(R.layout.row_send_layout, parent, false);
                     TextView thisRowText = sView.findViewById(R.id.tx_send);
                     ImageView thisImg = sView.findViewById(R.id.simgview);
-                    thisRowText.setText(textmsg.getType());
-                    thisImg.setImageResource(R.drawable.row_send);
+                    thisRowText.setText(textmsg.getText());
+                    thisImg.setImageResource(textmsg.getImg());
                     return sView;
                 }
-                case 1: {
+                case 1 : {
 
                     View rView = inflater.inflate(R.layout.row_rcv_layout, parent, false);
                     TextView thisRowText = rView.findViewById(R.id.tx_rcv);
-                    ImageView thisImg = rView.findViewById(R.id.simgview);
-                    thisRowText.setText(textmsg.getType());
-                    thisImg.setImageResource(R.drawable.row_receive);
+                    ImageView thisImg = rView.findViewById(R.id.rimgview);
+                    thisRowText.setText(textmsg.getText());
+                    thisImg.setImageResource(textmsg.getImg());
                     return rView;
                 }
                 default:
