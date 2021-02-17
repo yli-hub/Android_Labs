@@ -6,6 +6,9 @@
     <string name="edt1">请输入邮箱</string>
     <string name="textv2">请输入密码</string>
     <string name="edt2">   密码   </string>
+    <string name="sButton">发送</string>
+    <string name="rButton">收到</string>
+    <string name="tptext">请输入</string>
     <string name="toast_message">跳转中</string>
     <string name="chatbtnmsg">Go to chat</string>
     <string name="ptextmeg1">你的资料</string>

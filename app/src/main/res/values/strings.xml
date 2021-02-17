@@ -6,6 +6,9 @@
     <string name="textv2">Enter the password</string>
     <string name="edt2">  password        </string>
     <string name="toast_message">Jumping...</string>
+    <string name="sButton">SEND</string>
+    <string name="rButton">RECEIVE...</string>
+    <string name="tptext">Type here.</string>
     <string name="chatbtnmsg">Go to chat</string>
     <string name="ptextmeg1">Your profile.</string>
     <string name="ptextmeg2">Your name</string>

@@ -22,20 +22,20 @@
             android:layout_width="110dp"
             android:layout_height="45dp"
             android:layout_weight="1"
-            android:text="SEND" />
+            android:text="@string/sButton" />
 
         <EditText
             android:id="@+id/type"
             android:layout_width="200dp"
             android:layout_height="45dp"
             android:layout_weight="2"
-            android:hint="Type here" />
+            android:hint="@string/tptext" />
 
         <Button
             android:id="@+id/rcvbtn"
             android:layout_width="110dp"
             android:layout_height="45dp"
             android:layout_weight="1"
-            android:text="RECIEVE" />
+            android:text="@string/rButton" />
     </LinearLayout>
 </LinearLayout>
