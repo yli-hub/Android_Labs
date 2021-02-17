@@ -18,4 +18,10 @@
     <string name="sendmsg">发送</string>
     <string name="recievemsg">接收</string>
     <string name="crtype">请输入...</string>
+    <string name="rm_title">确认删除吗？</string>
+    <string name="rm_msg1">"选择的行数是 "</string>
+    <string name="rm_msg2">"选择的数据是" </string>
+    <string name="p_msg1">"是"</string>
+    <string name="n_msg2">"否" </string>
+
 </resources>

@@ -1,5 +1,6 @@
 package com.cst2335.li000713;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -34,8 +35,22 @@ public class ChatRoomActivity<MyListAdapter> extends AppCompatActivity {
         chatlist = (ListView) findViewById(R.id.crlv);
         chatlist.setAdapter(myAdapter);
 
-        EditText etext = findViewById(R.id.type);
+        chatlist.setOnItemLongClickListener((parent, view, row, id) -> {
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+            alertDialogBuilder.setTitle(getString(R.string.rm_title))
+                    .setMessage( getString(R.string.rm_msg1)+ row +
+                            "      "+getString(R.string.rm_msg2) + id)
+                    .setPositiveButton(getString(R.string.p_msg1), (click, arg) -> {
+                        element.remove(row);
+                        myAdapter.notifyDataSetChanged();
+                    })
+                    .setNegativeButton(getString(R.string.n_msg2), (click, arg) -> {
+                    })
+                    .create().show();
+            return true;
+            });
 
+        EditText etext = findViewById(R.id.type);
         sendBtn = findViewById(R.id.sendbtn);
         sendBtn.setOnClickListener(click -> {
             Message smsg = new Message(etext.getText().toString(), R.drawable.row_send, 0);
@@ -74,6 +89,10 @@ public class ChatRoomActivity<MyListAdapter> extends AppCompatActivity {
             return type;
         }
     }
+
+
+
+
 
     class MyListAdapter extends BaseAdapter {
 

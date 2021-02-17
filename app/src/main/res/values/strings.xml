@@ -17,4 +17,9 @@
     <string name="sendmsg">SEND</string>
     <string name="recievemsg">RECIEVE</string>
     <string name="crtype">Type here</string>
+    <string name="rm_title">Do you want delete this?</string>
+    <string name="rm_msg1">"The selected row is: "</string>
+    <string name="rm_msg2">"The database id id: " </string>
+    <string name="p_msg1">"YES "</string>
+    <string name="n_msg2">"NO" </string>
 </resources>
