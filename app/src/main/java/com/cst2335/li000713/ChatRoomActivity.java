@@ -126,8 +126,8 @@ public class ChatRoomActivity<MyListAdapter> extends AppCompatActivity {
         }
         Log.e("Number Rows", Integer.toString(c.getCount()));
         c.moveToFirst();
-        for (int i = 1; i < c.getCount(); i++) {
-            Log.e("row", Integer.toString(i)
+        for (int i = 0; i < c.getCount(); i++) {
+            Log.e("row", Integer.toString(i+1)
                     + ";  message  " + c.getString(c.getColumnIndex(MyOpener.COL_TEXT))
                     + ";  isSend:  " + Integer.toString(c.getInt(c.getColumnIndex(MyOpener.COL_TYPE)))
                     + ";  _id: " + Integer.toString(c.getInt(c.getColumnIndex(MyOpener.COL_ID))));
