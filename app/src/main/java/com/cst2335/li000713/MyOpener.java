@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 public class MyOpener extends SQLiteOpenHelper {
 
     protected final static String DATABASE_NAME = "MESSAGEDB";
-    protected final static int VERSION_NUM = 1;
+    protected final static int VERSION_NUM = 5;
     public final static String TABLE_NAME = "MESSAGE_TABLE";
     public final static String COL_ID = "_id";
     public final static String COL_TEXT = "TEXT";
@@ -25,10 +25,10 @@ public class MyOpener extends SQLiteOpenHelper {
      @Override
     public void onCreate(SQLiteDatabase db)
      {
-        db.execSQL("CREATE TABLE " + TABLE_NAME + "(_id INTEGER PRIMARY KEY AUTOINCREMENT,"
-        +COL_TEXT + "text,"
-        +COL_TYPE + "INTEGER);");
-    }
+         db.execSQL("CREATE TABLE " + TABLE_NAME + "  (_id INTEGER PRIMARY KEY AUTOINCREMENT, "
+                 + COL_TEXT + "  text,"
+                 + COL_TYPE  + "  INTEGER);");
+     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {

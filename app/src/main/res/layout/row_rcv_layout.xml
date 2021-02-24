@@ -8,7 +8,8 @@
         android:id="@+id/tx_rcv"
         android:layout_width="350dp"
         android:layout_height="70dp"
-        android:textSize="30dp" />
+        android:textSize="30dp"
+        android:gravity="right"/>
 
     <ImageView
         android:id="@+id/rimgview"
