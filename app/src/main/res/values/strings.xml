@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Chatroom</string>
+    <string name="app_name">Weather Forecast</string>
     <string name="textv1">Enter your email address</string>
     <string name="ButtonText">Login</string>
     <string name="edt1">Type your email</string>
@@ -25,4 +25,9 @@
     <string name="rm_msg2">"The database id is: " </string>
     <string name="p_msg1">"YES "</string>
     <string name="n_msg2">"NO" </string>
+    <string name="checkwt">"CHECK WEATHER" </string>
+    <string name="currtp">"Current Temperature" </string>
+    <string name="mintp">"Current Temperature" </string>
+    <string name="maxtp">"Current Temperature" </string>
+    <string name="uvrt">"UV Rating" </string>
 </resources>

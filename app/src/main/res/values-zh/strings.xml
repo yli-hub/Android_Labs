@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">实验3</string>
+    <string name="app_name">天气预报</string>
     <string name="textv1">请输入邮件地址</string>
     <string name="ButtonText">登录</string>
     <string name="edt1">请输入邮箱</string>
@@ -26,5 +26,9 @@
     <string name="rm_msg2">"选择的数据是" </string>
     <string name="p_msg1">"是"</string>
     <string name="n_msg2">"否" </string>
-
+    <string name="checkwt">"查天气" </string>
+    <string name="currtp">"当前温度" </string>
+    <string name="mintp">"最低温度" </string>
+    <string name="maxtp">"最高温度" </string>
+    <string name="uvrt">"紫外线强度" </string>
 </resources>

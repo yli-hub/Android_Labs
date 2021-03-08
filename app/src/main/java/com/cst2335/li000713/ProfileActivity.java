@@ -1,6 +1,8 @@
 package com.cst2335.li000713;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -20,6 +22,8 @@ public class ProfileActivity<click> extends AppCompatActivity {
     private ImageButton mImageButton;
     private EditText email;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +35,12 @@ public class ProfileActivity<click> extends AppCompatActivity {
         mImageButton.setOnClickListener(click -> dispatchTakePictureIntent());
         Intent fromMain = getIntent();
         email.setText(fromMain.getStringExtra("email"));
+
+        Button CheckWeather = findViewById(R.id.CheckWeather);
+        Intent Checkweather = new Intent(ProfileActivity.this, WeatherForecast.class);
+        CheckWeather.setOnClickListener(click -> {
+            startActivity(Checkweather);
+        });
 
         Button chatbtn = findViewById(R.id.chatbtn);
         Intent goToChatrm = new Intent(ProfileActivity.this, ChatRoomActivity.class);

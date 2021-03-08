@@ -20,6 +20,14 @@
         android:layout_height="60dp"
         android:text="@string/chatbtnmsg"
         />
+
+    <Button
+
+        android:id="@+id/CheckWeather"
+        android:layout_width="398dp"
+        android:layout_height="60dp"
+        android:text="@string/checkwt"
+        />
     <TextView
         android:id="@+id/pText2"
         android:layout_width="match_parent"
