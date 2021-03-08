@@ -18,28 +18,27 @@
         android:id="@+id/curweather"
         android:layout_width="350dp"
         android:layout_height="70dp"
-        android:text="@string/currtp"
+
         android:textSize="25dp" />
 
     <TextView
         android:id="@+id/mintemp"
         android:layout_width="350dp"
         android:layout_height="70dp"
-        android:text="@string/mintp"
+
         android:textSize="25dp" />
     <TextView
         android:id="@+id/maxtemp"
         android:layout_width="350dp"
         android:layout_height="70dp"
-        android:text="@string/maxtp"
+
         android:textSize="25dp" />
 
     <TextView
         android:id="@+id/UVrating"
         android:layout_width="350dp"
         android:layout_height="70dp"
-        android:textSize="25dp"
-        android:text="@string/uvrt"/>
+        android:textSize="25dp"/>
 
     <ProgressBar
         android:id="@+id/progressBar"
