@@ -30,4 +30,9 @@
     <string name="mintp">"Current Temperature" </string>
     <string name="maxtp">"Current Temperature" </string>
     <string name="uvrt">"UV Rating" </string>
+
+    <string name="fd_Meg1">"Message Here"</string>
+    <string name="fd_Meg2">"ID="</string>
+    <string name="fdckbox">"is a Send Message"</string>
+    <string name="hidetext">"HIDE"</string>
 </resources>

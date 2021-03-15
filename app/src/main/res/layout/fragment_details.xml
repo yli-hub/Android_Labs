@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tools:context=".DetailsFragment"
+    android:id="@+id/fragmentLocation">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <TextView
+        android:id="@+id/fdmsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fd_Meg1" />
+
+    <TextView
+        android:id="@+id/fdid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fd_Meg2"
+        android:layout_below="@id/fdmsg"
+        />
+
+    <CheckBox
+        android:id="@+id/fdckbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fdckbox"
+        android:layout_below="@id/fdid"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/hideButton"
+       android:layout_alignParentBottom="true"
+        android:text="@string/hidetext"/>
+
+</RelativeLayout>

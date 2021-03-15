@@ -31,4 +31,8 @@
     <string name="mintp">"最低温度" </string>
     <string name="maxtp">"最高温度" </string>
     <string name="uvrt">"紫外线强度" </string>
+    <string name="fd_Meg1">"信息如下"</string>
+    <string name="fd_Meg2">"ID="</string>
+    <string name="fdckbox">"是一个发出的讯息"</string>
+    <string name="hidetext">"隐藏"</string>
 </resources>

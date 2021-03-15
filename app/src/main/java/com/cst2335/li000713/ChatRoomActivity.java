@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -14,20 +15,27 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 
 public class ChatRoomActivity<MyListAdapter> extends AppCompatActivity {
+    public static final String ITEM_SELECTED = "ITEM";
+    public static final String ITEM_POSITION = "POSITION";
+    public static final String ITEM_ID = "ID";
     private ListView chatlist;
     private ArrayList<Message> element = new ArrayList<>();
     SQLiteDatabase db;
     private ChatRoomActivity.MyListAdapter myAdapter;
     private Button sendBtn;
     private Button rcvBtn;
+//    private FrameLayout framel;
 
 
     @Override
@@ -37,11 +45,13 @@ public class ChatRoomActivity<MyListAdapter> extends AppCompatActivity {
 
         myAdapter = new ChatRoomActivity.MyListAdapter();
 
+
         chatlist = (ListView) findViewById(R.id.crlv);
         chatlist.setAdapter(myAdapter);
         EditText etext = findViewById(R.id.type);
 
         loadDataFromDatabase();
+
         chatlist.setOnItemLongClickListener((parent, view, row, id) -> {
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
             alertDialogBuilder.setTitle(getString(R.string.rm_title))
@@ -87,7 +97,35 @@ public class ChatRoomActivity<MyListAdapter> extends AppCompatActivity {
             Toast.makeText(this, "Inserted item id:" + newId, Toast.LENGTH_LONG).show();
             myAdapter.notifyDataSetChanged();
         });
+
+        boolean isTablet = findViewById(R.id.fragmentLocation) != null;
+
+        chatlist.setOnItemClickListener((list, item, position, id) -> {
+            //Create a bundle to pass data to the new fragment
+            Bundle dataToPass = new Bundle();
+
+            dataToPass.putString(ITEM_SELECTED, element.get(position).getMsg());
+            dataToPass.putLong(ITEM_ID, id);
+            dataToPass.putBoolean(ITEM_POSITION, element.get(position).getIsSend());
+
+
+            if (isTablet) {
+                DetailsFragment dFragment = new DetailsFragment(); //add a DetailFragment
+                dFragment.setArguments(dataToPass); //pass it a bundle for information
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.fragmentLocation, dFragment) //Add the fragment in FrameLayout
+                        .commit(); //actually load the fragment. Calls onCreate() in DetailFragment
+            } else //isPhone
+            {
+                Intent nextActivity = new Intent(ChatRoomActivity.this, EmptyActivity.class);
+                nextActivity.putExtras(dataToPass); //send data to next activity
+                startActivity(nextActivity); //make the transition
+            }
+        });
+
     }
+
 
     private void loadDataFromDatabase() {
         MyOpener dbOpener = new MyOpener(this);
