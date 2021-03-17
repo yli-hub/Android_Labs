@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DetailsFragment"
     android:id="@+id/fragmentLocation">
 
     <!-- TODO: Update blank fragment layout -->
 
-
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <TextView
         android:id="@+id/fdmsg"
         android:layout_width="match_parent"
@@ -20,9 +23,9 @@
         android:id="@+id/fdid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/fd_Meg2"
         android:layout_below="@id/fdmsg"
-        />
+        android:layout_marginTop="9dp"
+        android:text="@string/fd_Meg2" />
 
     <CheckBox
         android:id="@+id/fdckbox"
@@ -36,5 +39,5 @@
         android:id="@+id/hideButton"
        android:layout_alignParentBottom="true"
         android:text="@string/hidetext"/>
-
 </RelativeLayout>
+</FrameLayout>

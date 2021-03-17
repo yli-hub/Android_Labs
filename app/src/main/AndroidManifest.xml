@@ -16,9 +16,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidLabs"
         android:usesCleartextTraffic="true">
-        <activity android:name=".EmptyActivity"></activity>
+        <activity android:name=".ChatRoomActivity"></activity>
+        <activity android:name=".DetailsFragment" />
+        <activity android:name=".ChatRoomActivty" />
+        <activity android:name=".EmptyActivity" />
         <activity android:name=".WeatherForecast" />
-        <activity android:name=".ChatRoomActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

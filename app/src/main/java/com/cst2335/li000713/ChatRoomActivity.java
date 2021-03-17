@@ -25,17 +25,16 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class ChatRoomActivity<MyListAdapter> extends AppCompatActivity {
+public class ChatRoomActivity extends AppCompatActivity {
     public static final String ITEM_SELECTED = "ITEM";
-    public static final String ITEM_POSITION = "POSITION";
+    public static final String ITEM_TYPE = "isSend";
     public static final String ITEM_ID = "ID";
-    private ListView chatlist;
     private ArrayList<Message> element = new ArrayList<>();
     SQLiteDatabase db;
     private ChatRoomActivity.MyListAdapter myAdapter;
     private Button sendBtn;
     private Button rcvBtn;
-//    private FrameLayout framel;
+
 
 
     @Override
@@ -43,16 +42,17 @@ public class ChatRoomActivity<MyListAdapter> extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_room);
 
-        myAdapter = new ChatRoomActivity.MyListAdapter();
+        myAdapter = new MyListAdapter();
 
 
-        chatlist = (ListView) findViewById(R.id.crlv);
-        chatlist.setAdapter(myAdapter);
+        ListView chatList = (ListView) findViewById(R.id.crlv);
+        chatList.setAdapter(myAdapter);
         EditText etext = findViewById(R.id.type);
+        FrameLayout frameLayout = findViewById(R.id.fragmentLocation);
+        boolean isTablet =  frameLayout!= null;
 
         loadDataFromDatabase();
-
-        chatlist.setOnItemLongClickListener((parent, view, row, id) -> {
+        chatList.setOnItemLongClickListener((parent, view, row, id) -> {
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
             alertDialogBuilder.setTitle(getString(R.string.rm_title))
                     .setMessage(getString(R.string.rm_msg1) + row +
@@ -62,6 +62,9 @@ public class ChatRoomActivity<MyListAdapter> extends AppCompatActivity {
                         db.delete(MyOpener.TABLE_NAME, MyOpener.COL_ID + "= ?",
                                 new String[]{Long.toString(myAdapter.getItemId(row))});
                         myAdapter.notifyDataSetChanged();
+                        if(isTablet) {
+                            frameLayout.removeAllViews();
+                        }
                     })
                     .setNegativeButton(getString(R.string.n_msg2), (click, arg) -> {
                     })
@@ -98,15 +101,14 @@ public class ChatRoomActivity<MyListAdapter> extends AppCompatActivity {
             myAdapter.notifyDataSetChanged();
         });
 
-        boolean isTablet = findViewById(R.id.fragmentLocation) != null;
 
-        chatlist.setOnItemClickListener((list, item, position, id) -> {
+        chatList.setOnItemClickListener((list, item, position, id) -> {
             //Create a bundle to pass data to the new fragment
             Bundle dataToPass = new Bundle();
 
             dataToPass.putString(ITEM_SELECTED, element.get(position).getMsg());
             dataToPass.putLong(ITEM_ID, id);
-            dataToPass.putBoolean(ITEM_POSITION, element.get(position).getIsSend());
+            dataToPass.putBoolean(ITEM_TYPE, element.get(position).getIsSend());
 
 
             if (isTablet) {

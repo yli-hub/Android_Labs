@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/tx_rcv"
-        android:layout_width="350dp"
-        android:layout_height="70dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:textSize="30dp"
-        android:gravity="right"/>
+        android:gravity="right"
+        android:layout_toLeftOf="@id/rimgview"
+        />
 
     <ImageView
         android:id="@+id/rimgview"
-        android:layout_width="50dp"
-        android:layout_height="70dp"
-        android:src="@drawable/row_receive"/>
+        android:layout_width="69dp"
+        android:layout_height="74dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/row_receive" />
 
-</LinearLayout>
+</RelativeLayout>

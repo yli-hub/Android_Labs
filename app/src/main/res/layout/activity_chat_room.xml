@@ -1,41 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ListView
         android:id="@+id/crlv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent" >
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
 
-        <Button
-            android:id="@+id/sendbtn"
-            android:layout_width="110dp"
-            android:layout_height="45dp"
-            android:layout_weight="1"
-            android:text="@string/sButton" />
+    </ListView>
 
-        <EditText
-            android:id="@+id/type"
-            android:layout_width="200dp"
-            android:layout_height="45dp"
-            android:layout_weight="2"
-            android:hint="@string/tptext" />
+    <Button
+        android:id="@+id/sendbtn"
+        android:layout_width="80dp"
+        android:layout_height="45dp"
+        android:text="@string/sButton"
+        android:layout_alignBottom="@id/crlv"
+        />
 
-        <Button
-            android:id="@+id/rcvbtn"
-            android:layout_width="110dp"
-            android:layout_height="45dp"
-            android:layout_weight="1"
-            android:text="@string/rButton" />
-    </LinearLayout>
-</LinearLayout>
+    <EditText
+        android:id="@+id/type"
+        android:layout_width="140dp"
+        android:layout_height="45dp"
+        android:hint="@string/tptext"
+        android:layout_alignBottom="@id/crlv"/>
+
+    <Button
+        android:id="@+id/rcvbtn"
+        android:layout_width="80dp"
+        android:layout_height="45dp"
+        android:text="@string/rButton"
+        android:layout_alignBottom="@id/crlv"
+        android:layout_alignRight="@id/crlv"
+        />
+
+</RelativeLayout>

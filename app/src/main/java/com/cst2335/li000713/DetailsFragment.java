@@ -1,6 +1,8 @@
 package com.cst2335.li000713;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,6 +31,10 @@ public class DetailsFragment extends Fragment {
     private Bundle dataFromActivity;
     private long id;
     private AppCompatActivity parentActivity;
+  //  private boolean isTablet;
+//    public void setTablet(boolean tablet) {
+//        isTablet = tablet;
+//    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,20 +47,20 @@ public class DetailsFragment extends Fragment {
         View result =  inflater.inflate(R.layout.fragment_details, container, false);
 
         //show the message
-        TextView message = (TextView)result.findViewById(R.id.message);
+        TextView message = (TextView)result.findViewById(R.id.fdmsg);
         message.setText(dataFromActivity.getString(ChatRoomActivity.ITEM_SELECTED));
 
         //show the id:
         TextView idView = (TextView)result.findViewById(R.id.fdid);
         idView.setText("ID=" + id);
 
-        CheckBox isSend = result.findViewById(R.id.fdckbox);
-        isSend.setChecked(dataFromActivity.getBoolean(ChatRoomActivity.ITEM_POSITION));
+        CheckBox check = result.findViewById(R.id.fdckbox);
+        check.setChecked(dataFromActivity.getBoolean(ChatRoomActivity.ITEM_TYPE));
+
                 // get the delete button, and add a click listener:
         Button hide = (Button)result.findViewById(R.id.hideButton);
         hide.setOnClickListener( clk -> {
 
-            //Tell the parent activity to remove
             parentActivity.getSupportFragmentManager().beginTransaction().remove(this).commit();
         });
 
