@@ -35,4 +35,21 @@
     <string name="fd_Meg2">"ID="</string>
     <string name="fdckbox">"is a Send Message"</string>
     <string name="hidetext">"HIDE"</string>
+    <string name="go2Toolbar">"Go to Toolbar"</string>
+    <string name="aButton">"GDFDSF "</string>
+    <string name="chatitem">"CHAT "</string>
+    <string name="weatheritem">"WEATHER "</string>
+    <string name="backitem">"WEATHER "</string>
+    <string name="on">"ON "</string>
+    <string name="off">"OFF "</string>
+    <string name="overflow">"You clicked on overflow"</string>
+    <string name="close">"Close"</string>
+    <string name="open">"Open"</string>
+    <string name="gochat">"Go To Chat"</string>
+    <string name="goweather">"Go To Weather"</string>
+    <string name="goback">"go back"</string>
+    <string name="chat">"Chat"</string>
+    <string name="weather">"Weather"</string>
+    <string name="back">"Back"</string>
+
 </resources>

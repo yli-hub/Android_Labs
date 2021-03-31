@@ -35,4 +35,20 @@
     <string name="fd_Meg2">"ID="</string>
     <string name="fdckbox">"是一个发出的讯息"</string>
     <string name="hidetext">"隐藏"</string>
+    <string name="go2Toolbar">"工具栏"</string>
+    <string name="aButton">"A按钮</string>
+    <string name="chatitem">"聊天"</string>
+    <string name="weatheritem">"天气 "</string>
+    <string name="backitem">"返回 "</string>
+    <string name="on">"开 "</string>
+    <string name="off">"关 "</string>
+    <string name="overflow">"测试折叠"</string>
+    <string name="close">"关"</string>
+    <string name="open">"开"</string>
+    <string name="gochat">"去聊天"</string>
+    <string name="goweather">"今日天气"</string>
+    <string name="goback">"上一级"</string>
+    <string name="chat">"Chat"</string>
+    <string name="weather">"Weather"</string>
+    <string name="back">"Back"</string>
 </resources>

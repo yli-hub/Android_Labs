@@ -14,7 +14,6 @@
         android:textSize="15dp"></TextView>
 
     <Button
-
         android:id="@+id/chatbtn"
         android:layout_width="398dp"
         android:layout_height="60dp"
@@ -22,12 +21,19 @@
         />
 
     <Button
-
         android:id="@+id/CheckWeather"
         android:layout_width="398dp"
         android:layout_height="60dp"
         android:text="@string/checkwt"
         />
+
+    <Button
+        android:id="@+id/gotoToolBar"
+        android:layout_width="398dp"
+        android:layout_height="60dp"
+        android:text="@string/go2Toolbar"
+        />
+
     <TextView
         android:id="@+id/pText2"
         android:layout_width="match_parent"
