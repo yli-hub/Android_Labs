@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item android:id="@+id/chat_item"
+        android:title="@string/chatitem"
+        android:icon="@drawable/chat"
+        android:orderInCategory="100"
+        app:showAsAction="always"/>  <!-- This uses showAsAction=always, so look at icon= parameter -->
+
+
+    <item android:id="@+id/weather_item"
+        android:orderInCategory="50"
+        android:icon="@drawable/weather"
+        app:showAsAction="always"
+        android:title="@string/weatheritem"/>    <!-- This uses showAsAction=always, so look at icon= parameter -->
+
+    <item android:id="@+id/back_item"
+        android:icon="@drawable/back"
+        android:orderInCategory="75"
+        app:showAsAction="always"
+        android:title="go back to previous page"/>
+
+    <item android:id="@+id/item4"
+        app:showAsAction="collapseActionView"
+        android:title="@string/overflow"
+        android:orderInCategory="400"/>
+</menu>

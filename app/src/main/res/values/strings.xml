@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Fragment</string>
+    <string name="app_name">Lab8 Toolbar</string>
     <string name="textv1">Enter your email address</string>
     <string name="ButtonText">Login</string>
     <string name="edt1">Type your email</string>

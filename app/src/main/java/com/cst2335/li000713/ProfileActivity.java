@@ -43,6 +43,11 @@ public class ProfileActivity extends AppCompatActivity {
             startActivity(goToChatrm);
         });
 
+        Button toolbar = findViewById(R.id.gotoToolBar);
+        Intent goToToolbar = new Intent(ProfileActivity.this,TestToolbar.class);
+        toolbar.setOnClickListener(click -> {
+            startActivity(goToToolbar);
+        });
          }
 
     private void dispatchTakePictureIntent() {
