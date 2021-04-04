@@ -16,6 +16,7 @@ public class ProfileActivity extends AppCompatActivity {
     public static final String ACTIVITY_NAME = "PROFILE_ACTIVITY";
     private ImageButton mImageButton;
     private EditText email;
+    public static final int RESULT_FMTOOL = 3;
 
 
 
@@ -46,7 +47,7 @@ public class ProfileActivity extends AppCompatActivity {
         Button toolbar = findViewById(R.id.gotoToolBar);
         Intent goToToolbar = new Intent(ProfileActivity.this,TestToolbar.class);
         toolbar.setOnClickListener(click -> {
-            startActivity(goToToolbar);
+            startActivityForResult(goToToolbar, 500);
         });
          }
 
@@ -64,6 +65,9 @@ public class ProfileActivity extends AppCompatActivity {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             mImageButton.setImageBitmap(imageBitmap);
+        }
+        if (requestCode == 500){
+            ProfileActivity.this.finish();
         }
     }
 

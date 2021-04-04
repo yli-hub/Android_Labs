@@ -19,6 +19,7 @@ public class MyOpener extends SQLiteOpenHelper {
 
 
    public MyOpener(Context ctx){
+
        super(ctx, DATABASE_NAME, null,VERSION_NUM);
    }
 

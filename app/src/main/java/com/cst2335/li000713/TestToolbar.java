@@ -18,6 +18,9 @@ import com.google.android.material.navigation.NavigationView;
 
 public class TestToolbar extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, BottomNavigationView.OnNavigationItemSelectedListener{
 
+    public static final int RESULT_REQUEST = 500;
+    Intent gobackToLogin = new Intent();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,8 +66,7 @@ public class TestToolbar extends AppCompatActivity implements NavigationView.OnN
                 break;
             case R.id.back_item:
                 message = "You clicked loginitem";
-                Intent intent = new Intent();
-                TestToolbar.this.setResult(500, intent);
+                TestToolbar.this.setResult(RESULT_REQUEST, gobackToLogin);
                 TestToolbar.this.finish();
                 break;
             case R.id.item4:
@@ -90,8 +92,7 @@ public class TestToolbar extends AppCompatActivity implements NavigationView.OnN
                 break;
             case R.id.back_item:
                 message = "You clicked loginitem";
-                Intent intent = new Intent();
-                TestToolbar.this.setResult(500, intent);
+                TestToolbar.this.setResult(RESULT_REQUEST, gobackToLogin);
                 TestToolbar.this.finish();
                 break;
         }
